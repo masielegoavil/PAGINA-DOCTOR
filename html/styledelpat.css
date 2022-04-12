@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'arial';
+}
+
+body{
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    padding: 100px 0px 20px;
+    background-image: url("doctores2.jpg");
+    background-size: cover;
+}
+
+.navbar{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: white;
+    z-index: 1001;
+    left:0;
+    top:0;
+    right:0;
+}
+.navbar .logo{
+	width: 290px;
+	height: auto;
+	padding: 10px 40px;
+}
+.navbar ul{
+	float: right;
+	margin-right: 20px;
+}
+.navbar ul li{
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 80px;
+}
+.navbar ul li a{
+	font-size: 20px;
+	font-family: arial ;
+	color: black;
+	padding: 10px 25px;
+	text-decoration: none;
+	transition: 0s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+	background: rgb(68, 114, 196);
+	border-radius: 25px;
+    color: #fff;
+}
+
+.navbar ul ul{
+  position: absolute;
+  top: 85px;
+  border-top: 3px solid black;
+  opacity: 0;
+  visibility: hidden;
+  background: white;
+
+  
+}
+.navbar ul li:hover > ul{
+  top: 75px;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s linear;
+}
+.navbar ul ul li{
+  width: 120px;
+  font-size: 15px;
+  display: list-item;
+  position: relative;
+  border: none;
+  height: 70px;
+}

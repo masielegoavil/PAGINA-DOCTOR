@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'arial';
+}
+
+body{
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    padding: 100px 0px 20px;
+    background-image: url("physician-770.jpg");
+    background-size: cover;
+}
+
+.navbar{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: white;
+    z-index: 1001;
+    left:0;
+    top:0;
+    right:0;
+}
+.navbar .logo{
+	width: 290px;
+	height: auto;
+	padding: 10px 40px;
+}
+.navbar ul{
+	float: right;
+	margin-right: 20px;
+}
+.navbar ul li{
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 80px;
+}
+.navbar ul li a{
+	font-size: 20px;
+	font-family: arial ;
+	color: black;
+	padding: 10px 25px;
+	text-decoration: none;
+	transition: 0s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+	background: rgb(68, 114, 196);
+	border-radius: 25px;
+    color: #fff;
+}
+
+.navbar ul ul{
+  position: absolute;
+  top: 85px;
+  border-top: 3px solid black;
+  opacity: 0;
+  visibility: hidden;
+  background: white;
+
+  
+}
+.navbar ul li:hover > ul{
+  top: 75px;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s linear;
+}
+.navbar ul ul li{
+  width: 120px;
+  font-size: 15px;
+  display: list-item;
+  position: relative;
+  border: none;
+  height: 70px;
+}
+
+
+/*--------------container space--------------*/
+.container{
+    max-width:700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    margin: auto;
+    opacity: 0.7;
+}
+/*------------mouse sobre el container--------*/
+.container:hover{
+    opacity: 1.0;
+}
+/*-----------título del container-------------*/
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+/*-------------bloques de preguntas-------*/
+.container form .appointment-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+/*---------------cada pregunta--------------*/
+form .appointment-details .input-box{
+    margin-bottom: 15px;
+    /*width: calc(100% / 2 - 20p);*/
+    
+}
+/*---------------cada título de pregunta-----------*/
+.appointment-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+/*----------------------cada espacio de respuesta-------*/
+.appointment-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    
+}
+/*---------respuestas completadas y sin completar-------*/
+.appointment-details .input-box input:focus{
+    border-color: rgb(13,67,141);
+}
+
+.appointment-details .input-box input:valid{
+    border-color: black;
+}
+
+/*-------------------tamaño del boton------------------------*/
+form .button{
+    height: 45px;
+    margin: 0;
+    color: #fff;
+    
+}
+/*-----------------estilo del boton--------------------*/
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: rgb(68, 114, 196);
+}
+/*------------------mouse sobre el boton--------------*/
+form .button input:hover{
+    background: rgb(13,67,141);
+    color: #fff;
+}

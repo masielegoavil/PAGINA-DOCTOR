@@ -1,0 +1,45 @@
+version: "3.3"
+
+services:
+  www:
+    build: .
+    ports:
+      - "8001:80"
+    volumes:
+      - ./www:/var/www/html/
+    links:
+      - db1
+    networks:
+      - default
+  
+  db1:
+    image: mysql:latest
+    container_name: db1
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    environment:
+      MYSQL_USER: user
+      MYSQL_ROOT_PASSWORD: mypassword
+      MYSQL_PASSWORD: mypassword
+      MYSQL_DATABASE: database1
+      MYSQL_DATABASE: login
+    volumes:
+      - my-db:/var/lib/mysql
+    ports:
+      - '3306:3306'
+  
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - "8082:80"
+    environment:
+      MYSQL_ROOT_PASSWORD: mypassword
+      PMA_HOST: db1
+      PMA_USER: root
+      PMA_PASSWORD: mypassword
+
+volumes:
+  my-db:
+    
+

@@ -1,0 +1,91 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.wrapper{
+	background: url(pasillooficial.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+.navbar{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: white;
+    z-index: 1001;
+}
+.navbar .logo{
+	width: 210px;
+	height: auto;
+	padding: 10px 40px;
+}
+/*---------opciones de menu estilo-------*/
+.navbar ul{
+	float: right;
+	margin-right: 20px;
+}
+.navbar ul li{
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 80px;
+}
+.navbar ul li a{
+    font-size: 20px;
+	font-family: 'arial' ;
+	color: black;
+	padding: 10px 25px;
+	text-decoration: none;
+	transition: 0s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+	background: rgb(68, 114, 196);
+	border-radius: 25px;
+    color: #fff;
+}
+
+/*---------estilo submenus--------*/
+.navbar ul ul{
+  position: absolute;
+  top: 85px;
+  border-top: 3px solid black;
+  opacity: 0;
+  visibility: hidden;
+  background: white;
+
+  
+}
+.navbar ul li:hover > ul{
+  top: 75px;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s linear;
+}
+.navbar ul ul li{
+  width: 120px;
+  font-size: 15px;
+  display: list-item;
+  position: relative;
+  border: none;
+  height: 70px;
+}
+
+
+.wrapper .center{
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	font-family: sans-serif;
+	user-select: none;
+}
+.center h1{
+	color: rgb(13,67,141);
+	font-size: 70px;
+	width: 900px;
+	font-weight: bold;
+	text-align: center;
+}

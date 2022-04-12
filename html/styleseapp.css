@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'arial';
+}
+
+body{
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*padding: 100px 0px 20px;*/
+    background-image: url("physician-770.jpg");
+    background-size: cover;
+    
+}
+.navbar{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: white;
+    z-index: 1001;
+    left:0;
+    top:0;
+    right:0;
+}
+.navbar .logo{
+	width: 290px;
+	height: auto;
+	padding: 10px 40px;
+}
+.navbar ul{
+	float: right;
+	margin-right: 20px;
+}
+.navbar ul li{
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 80px;
+}
+.navbar ul li a{
+	font-size: 20px;
+	font-family: arial ;
+	color: black;
+	padding: 10px 25px;
+	text-decoration: none;
+	transition: 0s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+	background: rgb(68, 114, 196);
+	border-radius: 25px;
+    color: #fff;
+}
+
+.navbar ul ul{
+  position: absolute;
+  top: 85px;
+  border-top: 3px solid black;
+  opacity: 0;
+  visibility: hidden;
+  background: white;
+
+  
+}
+.navbar ul li:hover > ul{
+  top: 75px;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s linear;
+}
+.navbar ul ul li{
+  width: 120px;
+  font-size: 15px;
+  display: list-item;
+  position: relative;
+  border: none;
+  height: 70px;
+}
+
+
+h1
+{
+    margin: 0 0 10px 10px;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+}
+
+.box
+{
+    position: absolute;
+    top:30%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%,-50%);
+}
+
+input
+{
+    position: relative;
+    display: inline-bock;
+    font-size: 20px;
+    box-sizing:border-box;
+    transition: 0.1s;
+}
+
+input[type="text"]
+{
+    background: #fff;
+    width: 340px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+}
+
+input[type="submit"]
+{
+    position: relative;
+    left: -5px;
+    border-radius: 0 25px 25px 0;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: rgb(68, 114, 196);
+    color: black;
+    
+}
+
+input[type="submit"]:hover
+{
+    background: rgb(13,67,141);
+    color: #fff;
+}
+
+table {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-collapse: collapse;
+        width: 800px;
+        height: 200px;
+        border: 1px solid #bdc3c7;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    tr {
+        transition: all .2s ease-in;
+        cursor: pointer;
+    }
+    
+    th,
+    td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    #header {
+        background-color: #16a085;
+        color: #fff;
+    }
+    
+    
+    tr:hover {
+        background-color: #f5f5f5;
+        transform: scale(1.02);
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    @media only screen and (max-width: 768px) {
+        table {
+            width: 90%;
+        }
+    }
